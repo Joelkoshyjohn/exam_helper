@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f7fb" />
+    <meta name="description" content="A personal study dashboard for the KTU CST401 Artificial Intelligence examination." />
+    <title>Studydesk — CST401 Artificial Intelligence</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="paper-data.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <a class="brand" href="#dashboard" aria-label="Study desk home">
+          <span class="brand-mark" aria-hidden="true">S</span>
+          <span>study<span class="brand-period">desk</span></span>
+        </a>
+        <div class="course-chip"><span class="course-dot"></span><span>CST401 <small>Artificial Intelligence</small></span></div>
+        <p class="nav-label">STUDY SPACE</p>
+        <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+          <button class="nav-item is-active" data-page="dashboard"><span class="nav-icon">⌂</span>Dashboard</button>
+          <button class="nav-item" data-page="syllabus"><span class="nav-icon">▤</span>My syllabus</button>
+          <button class="nav-item" data-page="important"><span class="nav-icon">☆</span>Important topics</button>
+          <button class="nav-item" data-page="papers"><span class="nav-icon">▧</span>Question papers</button>
+          <button class="nav-item" data-page="repeated"><span class="nav-icon">↻</span>Repeated questions</button>
+          <button class="nav-item" data-page="bank"><span class="nav-icon">☷</span>Question bank</button>
+          <button class="nav-item" data-page="bookmarks"><span class="nav-icon">☆</span>Bookmarks</button>
+          <button class="nav-item" data-page="notes"><span class="nav-icon">▱</span>Study notes</button>
+          <button class="nav-item" data-page="planner"><span class="nav-icon">▦</span>Study planner</button>
+          <button class="nav-item" data-page="revision"><span class="nav-icon">◷</span>Revision tracker</button>
+          <button class="nav-item" data-page="mock"><span class="nav-icon">✎</span>Mock exam</button>
+          <button class="nav-item" data-page="formulas"><span class="nav-icon">ƒ</span>Formula sheet</button>
+          <button class="nav-item" data-page="analytics"><span class="nav-icon">▥</span>Analytics</button>
+          <button class="nav-item" data-page="settings"><span class="nav-icon">⚙</span>Settings</button>
+        </nav>
+        <div class="sidebar-bottom">
+          <div class="streak-mini"><span>✦</span><div><strong id="sidebar-streak">0 day streak</strong><small>Keep showing up</small></div></div>
+          <button class="nav-item" data-page="settings"><span class="nav-icon">⚙</span>Preferences</button>
+          <span class="sidebar-caption">Your progress is saved on this device.</span>
+        </div>
+      </aside>
+
+      <div class="main-column">
+        <header class="topbar">
+          <button class="mobile-menu" id="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
+          <div class="breadcrumbs"><span>Study space</span><span class="crumb-separator">/</span><strong id="page-breadcrumb">Dashboard</strong></div>
+          <div class="topbar-actions">
+            <label class="global-search"><span aria-hidden="true">⌕</span><input id="global-search" type="search" placeholder="Search topics and questions" aria-label="Search topics and questions" /><kbd>⌘ K</kbd></label>
+            <button class="icon-button" id="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">◐</button>
+          </div>
+        </header>
+        <main class="page-content" id="page-content" tabindex="-1"></main>
+        <footer class="footer-note">KTU B.Tech S7 CSE · 2019 Scheme <span>Local-first study space</span></footer>
+      </div>
+    </div>
+    <div class="toast-region" id="toast-region" aria-live="polite"></div>
+  </body>
+</html>
